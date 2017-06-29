@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="App42RichPushSampleSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JfH-bQ-Bvp">
+                                <rect key="frame" x="20" y="38" width="284" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ajw-dk-QtU">
+                                <rect key="frame" x="20" y="83" width="284" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PushType" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6xA-IT-tlW">
+                                <rect key="frame" x="20" y="130" width="284" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ax-R3-eIX">
+                                <rect key="frame" x="112" y="207" width="96" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Send Push"/>
+                                <connections>
+                                    <action selector="sendPushBtnClcik:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZl-GB-ldM"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oyu-pi-Em8">
+                                <rect key="frame" x="0.0" y="264" width="320" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ajw-dk-QtU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="72I-aL-b4M"/>
+                            <constraint firstItem="JfH-bQ-Bvp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="8kT-xO-KhT"/>
+                            <constraint firstItem="JfH-bQ-Bvp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="BhJ-Fm-OLL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JfH-bQ-Bvp" secondAttribute="trailing" id="C1i-ve-f6i"/>
+                            <constraint firstItem="Ajw-dk-QtU" firstAttribute="top" secondItem="JfH-bQ-Bvp" secondAttribute="bottom" constant="15" id="CWX-38-XcD"/>
+                            <constraint firstItem="4ax-R3-eIX" firstAttribute="top" secondItem="6xA-IT-tlW" secondAttribute="bottom" constant="47" id="FG2-HP-SZ5"/>
+                            <constraint firstAttribute="trailing" secondItem="Oyu-pi-Em8" secondAttribute="trailing" id="IEx-IH-PKy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ajw-dk-QtU" secondAttribute="trailing" id="KS4-zC-3QS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4ax-R3-eIX" secondAttribute="trailing" constant="96" id="Lnv-MF-tCN"/>
+                            <constraint firstItem="4ax-R3-eIX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="Lo6-d5-PTG"/>
+                            <constraint firstItem="6xA-IT-tlW" firstAttribute="top" secondItem="Ajw-dk-QtU" secondAttribute="bottom" constant="17" id="a2G-Mp-REM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Oyu-pi-Em8" secondAttribute="bottom" id="dO4-Yu-ZTQ"/>
+                            <constraint firstItem="6xA-IT-tlW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="fWa-SL-1pV"/>
+                            <constraint firstItem="Oyu-pi-Em8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hZp-SJ-erg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6xA-IT-tlW" secondAttribute="trailing" id="wVV-D5-RcZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="Ajw-dk-QtU" id="DXN-rB-ZSi"/>
+                        <outlet property="pushPickerView" destination="Oyu-pi-Em8" id="rjG-VZ-E7N"/>
+                        <outlet property="pushTypeTextField" destination="6xA-IT-tlW" id="gHE-1B-xTj"/>
+                        <outlet property="userNameTextField" destination="JfH-bQ-Bvp" id="ewR-tb-IWd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-160.80000000000001" y="89.505247376311857"/>
+        </scene>
+    </scenes>
+</document>
